@@ -1,0 +1,30 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+// 그룹
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+// 자바 11버전
+sourceCompatibility = '11'
+
+// 의존성을 가져오는 원격 저장소
+repositories {
+    mavenCentral()
+}
+
+// 의존성
+dependencies {
+    // 1. Thymeleaf - 템플릿 엔진
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.5.4'
+    // 2. Web - 웹 MVC
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.4'
+    // 3. 테스트 - jUnit 5를 사용합니다.
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.4'
+}
+
+test {
+    useJUnitPlatform()
+}
